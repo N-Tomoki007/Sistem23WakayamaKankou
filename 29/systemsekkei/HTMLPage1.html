@@ -4,8 +4,17 @@
 <head>
     <meta charset="utf-8" />
     <title>おすすめの予定表</title>
+
     <link rel="stylesheet" href="TextFile2.css">
-    
+    <link rel="stylesheet" href="button.css">
+
+    <script language="javascript" type="text/javascript">
+        function OnButtonClick() {
+            target = document.getElementById("output");
+            target.innerHTML = "この経路で行こう！";
+        }
+    </script>
+
 </head>
 
 <body class="gradient">
@@ -55,59 +64,26 @@
     </form>　　　　　　　　　　<!--ここまで交通手段選択場所-->
 
 
-    <center>どうする？</center>
+    <center>先にどこ行きたい？</center>
     <form name="when come here">
-        <!--ここでなんかやる-->
+　　<!--ここでなんかやる-->
         <div class="radio-wrapp">
             <input type="radio" name="testt" value="First">1
             <input type="radio" name="testt" value="Second">2
             <input type="radio" name="testt" value="Third">3
             <input type="radio" name="testt" value="Fourth">4
+            <input type="radio" name="testt" value="fifth">5
             <br>
-            <center><button type="button" onclick="functionNum(1)">1のボタン</button></center>
         </div>
     </form>　　　　　　　　　　　　　　　　　　　　　　　<!--ここまででなんかやる-->
 
 
 
     <br>
-    <input type="button" value="経路作成" id="checkButton">
-
-    <p id="msg"></p>
-
-    <script>
-
-        function butotnClick() {
-            msg.innerText = place1.value;
-            msg.innerText = place2.value;
-            msg.innerText = place3.value;
-            msg.innerText = place4.value;
-            msg.innerText = place5.value;
-        }
-
-        let place1 = document.getElementById('place1');
-        place1.value = '名前';
-        let msg = document.getElementById('msg');
-
-        let place2 = document.getElementById('place2');
-        place2.value = '名前';
-        let msg = document.getElementById('msg');
-
-        let place3 = document.getElementById('place3');
-        place3.value = '名前';
-        let msg = document.getElementById('msg');
-
-        let place4 = document.getElementById('place4');
-        place4.value = '名前';
-        let msg = document.getElementById('msg');
-
-        let place5 = document.getElementById('place5');
-        place5.value = '名前';
-        let msg = document.getElementById('msg');
+    <input type="button" value="経路作成" onclick="OnButtonClick();" />
+    <br />
+    <div id="output"></div> <!--ここから作成した経路を表示させたい-->
 
 
-        let checkButton = document.getElementById('checkButton');
-        checkButton.addEventListener('click', butotnClick);
-    </script>
 </body>
 </html>
