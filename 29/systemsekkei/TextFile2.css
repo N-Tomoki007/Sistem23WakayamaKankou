@@ -10,7 +10,7 @@ p {
 body {
 	width: 100%;
 	height: 100vh;
-	background: linear-gradient(45deg, #00bfff,#ffff00,#ffa500); /*グラデーションを定義*/
+	background: linear-gradient(45deg, #00ffff,#ffff00,#ffa500); /*グラデーションを定義*/
 	background-size: 200% 200%; /*サイズを大きくひきのばす*/
 	animation: bggradient 20s ease infinite;
 }
