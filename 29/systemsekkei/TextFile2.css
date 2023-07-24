@@ -1,5 +1,30 @@
-.gradient { 
-	background:radial-gradient(#ffff7a, #7affff); 
-	height: 700px;
-	border: 1px solid #333;
+p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+}
+
+/*========= body背景色の変化CSS ===============*/
+
+body {
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(45deg, #00bfff,#ffff00,#ffa500); /*グラデーションを定義*/
+	background-size: 200% 200%; /*サイズを大きくひきのばす*/
+	animation: bggradient 20s ease infinite;
+}
+
+@keyframes bggradient {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
 }
